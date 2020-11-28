@@ -4,7 +4,7 @@ A Simplest Carousal made with Vanilla JavaScript with Prev and next button with 
 
 Change Configration of Carousal in Carousal Function
 
-
+```
 function carousal() {
  //-------------- Configurations ---------------//
     let count = 0; // Dont Change this Otherwise Some images wont show up
@@ -14,3 +14,4 @@ function carousal() {
     let autoplay = false; //Boolean
     //-------------- Configurations ---------------//
    ...
+```
