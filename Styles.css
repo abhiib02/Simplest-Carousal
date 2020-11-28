@@ -1,0 +1,19 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+.carousal-container {
+  width: 60%;
+  margin: auto;
+  border: 5px solid black;
+}
+
+.carousal-container img {
+  width: 100%;
+  height: 350px;
+}
+
+.no-show {
+  display: none;
+}
