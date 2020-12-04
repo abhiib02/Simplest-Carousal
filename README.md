@@ -27,7 +27,7 @@ for Example : App.vue
 ```html
  <Carousel :carousalImages="carousalImages"></Carousel>
  // for autoplay Carousel
- <!--<Carousel :carousalImages="carousalImages" autoplay></Carousel>-->
+ <Carousel :carousalImages="carousalImages" autoplay></Carousel>
 ```
 ```js
   import Carousel from "./components/Carousel";
