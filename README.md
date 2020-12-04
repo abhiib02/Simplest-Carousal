@@ -24,11 +24,12 @@ carousel(true); // default False;
 ### Just add Carousel.Vue file to your Components Directory
 inside vue file where you Used component
 for Example : App.vue
-```vue
+```html
  <Carousel :carousalImages="carousalImages"></Carousel>
  // for autoplay Carousel
  <!--<Carousel :carousalImages="carousalImages" autoplay></Carousel>-->
-  
+```
+```js
   import Carousel from "./components/Carousel";
 export default {
   data() {
@@ -46,7 +47,7 @@ export default {
 
 ```
 Carousel.vue
-```vue
+```js
 export default {
   props: {
     carousalImages: Array,
