@@ -1,5 +1,5 @@
 # Simplest-Carousel
-A Simplest Carousel made with Vanilla JavaScript with Prev and next button with Autoplay and css animation class
+### A Simplest Carousel made with Vanilla JavaScript with Prev and next button with Autoplay and css animation class
 
 
 Change Configration of Carousel in Carousel Function
@@ -20,3 +20,49 @@ In the argument of Carousal function you can pass true or false to turn on or tu
 ```js
 carousel(true); // default False;
 ```
+# Vue Component 
+### Just add Carousel.Vue file to your Components Directory
+inside vue file where you Used component
+for Example : App.vue
+```vue
+ <Carousel :carousalImages="carousalImages"></Carousel>
+ // for autoplay Carousel
+ <!--<Carousel :carousalImages="carousalImages" autoplay></Carousel>-->
+  
+  import Carousel from "./components/Carousel";
+export default {
+  data() {
+    return {
+      carousalImages: [
+        {image:""},
+        {image:""},
+        {image:""},
+        {image:""},
+        {image:""},
+        ]
+      }
+    
+   ...
+
+```
+Carousel.vue
+```vue
+export default {
+  props: {
+    carousalImages: Array,
+    autoplay: Boolean,
+  },
+
+  data() {
+    return {
+      count: 0,
+      active: Boolean,
+      active2: Boolean,
+      animation_duration: 1000,
+      Imagestay_duration: 1000,
+      autoplay: false,
+    };
+  },
+  ...
+```
+
