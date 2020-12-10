@@ -6,6 +6,16 @@ const dotsContainer = document.querySelector(".dotsContainer");
 const prevBtn = document.querySelector("#prevBtn");
 const nextBtn = document.querySelector("#nextBtn");
 
+
+function getParam(){
+  console.log(document.URL);
+   let url_string = document.URL
+   let url = new URL(url_string);
+   let qs = url.searchParams.get("autoplay");
+  return qs;
+}
+
+
 function carousel({auto,duration,interval,enterClass,leaveClass}) {
 	//-------------- Configurations ---------------//
 	//Counter 
@@ -129,7 +139,7 @@ function carousel({auto,duration,interval,enterClass,leaveClass}) {
 }
 
 carousel({
-  'auto':true,
+  'auto':getParam(),
   'interval':4000,
   'duration':1000,
   'enterClass':'animate__zoomInDown',
