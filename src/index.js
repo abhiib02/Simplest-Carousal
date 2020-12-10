@@ -162,7 +162,7 @@ const carouselImages = document.querySelectorAll(slides);
 carousel({
   'container':".carousel-container",
   'slides':'.slide',
-  'auto': getParam(),
+  'auto': false,
   'interval':4000,
   'duration':1000,
   'enterClass':'animate__zoomInDown',
