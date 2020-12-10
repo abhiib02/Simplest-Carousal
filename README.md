@@ -46,7 +46,7 @@ Change Configration of Carousel by passing object with these key value pairs
 carousel({
   'container':".carousel-container",
   'slides':'.slide',
-  'auto': getParam(),
+  'auto': true, //default false
   'interval':4000,
   'duration':1000,
   'enterClass':'animate__zoomInDown',
