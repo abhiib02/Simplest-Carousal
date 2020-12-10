@@ -1,5 +1,12 @@
 html {
   overflow: hidden;
+  background: black;
+}
+
+.wrapper {
+  height: 100vh;
+  display: grid;
+  place-items: center;
 }
 
 * {
@@ -9,15 +16,21 @@ html {
 }
 
 .carousel-container {
-  width: 60%;
-  margin: auto;
+  width: 350px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
   position: relative;
 }
 
 .carousel-container img {
-  width: 100%;
+  width: 350px;
   height: 350px;
-  object-fit: contain;
+  object-fit: cover;
+}
+
+.brdr-rad-10 {
+  border-radius: 10px;
 }
 
 .no-show {
@@ -25,11 +38,36 @@ html {
 }
 
 #prevBtn {
-  left: 10%;
+  transform: translateX(-500%);
+}
+
+.dotsContainer {
+  position: absolute;
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  bottom: 0%;
+  transform: translateY(300%);
+}
+
+.dot {
+  display: block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  opacity: .04;
+  background: white;
+}
+
+.active {
+  opacity: 1;
+  animation: anim-opacity 2.5s infinite alternate;
 }
 
 #nextBtn {
-  right: 10%;
+  transform: translateX(500%);
 }
 
 .btn {
@@ -47,4 +85,13 @@ html {
 }
 .btn:hover {
   filter: invert(1);
+}
+
+@keyframes anim-opacity {
+  0% {
+    opacity: .04;
+  }
+  100% {
+    opacity: 1;
+  }
 }
