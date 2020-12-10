@@ -1,11 +1,3 @@
-// bake your code here
-const carouselContainer = document.querySelector(".carousel-container");
-const carouselImages = document.querySelectorAll(".carousel-slide img");
-const dotsContainer = document.querySelector(".dotsContainer");
-//Buttons
-const prevBtn = document.querySelector("#prevBtn");
-const nextBtn = document.querySelector("#nextBtn");
-
 
 function getParam(){
   console.log(document.URL);
@@ -15,9 +7,22 @@ function getParam(){
   return qs;
 }
 
+function carousel({
+  container,
+  slides,
+  auto,
+  duration,
+  interval,
+  enterClass,
+  leaveClass}) 
 
-function carousel({auto,duration,interval,enterClass,leaveClass}) {
+{
+  
+  
 	//-------------- Configurations ---------------//
+const carouselContainer = document.querySelector(container);
+const carouselImages = document.querySelectorAll(slides);
+
 	//Counter 
 	let count = 0; // Dont Change this Otherwise Some images wont show up
 	let animation_duration = duration; // Set this according to you css animation duration
@@ -26,9 +31,25 @@ function carousel({auto,duration,interval,enterClass,leaveClass}) {
 	let animation_leave = leaveClass;
 	let autoplay = auto; //Boolean
 	//-------------- Configurations ---------------//
-	let Image = document.createElement("img"); //----------------Creating Element of image inside Container -----------//
+  let prevBtn = document.createElement("a"); 
+  let nextBtn = document.createElement("a"); 
+	let Image = document.createElement("img"); 
+  let dotswrapper = document.createElement("div"); 
+  
+  //----------------Creating Element of image inside Container -----------//
+  prevBtn.setAttribute('class','btn');
+  prevBtn.setAttribute('id','prevBtn');
+  prevBtn.innerHTML='<span class="iconify" data-inline="false" data-icon="carbon:previous-outline"></span>';
+  nextBtn.setAttribute('class','btn');
+  nextBtn.setAttribute('id','nextBtn');
+  nextBtn.innerHTML='<span class="iconify" data-inline="false" data-icon="carbon:next-outline"></span>';
+  dotswrapper.setAttribute('class','dotsContainer');
 	Image.src = carouselImages[count].currentSrc; //--------------- Adding Image src from the html images--------------//
-	carouselContainer.appendChild(Image); //---------------- Inserting Image element inside Container-----------//
+  carouselContainer.appendChild(prevBtn);
+  carouselContainer.appendChild(nextBtn);
+	carouselContainer.appendChild(Image);
+  carouselContainer.appendChild(dotswrapper);//---------------- Inserting Image element inside Container-----------//
+  const dotsContainer = document.querySelector(".dotsContainer");
 	Image.classList.add("brdr-rad-10", "animate__animated"); //---------------- Adding Animate.css Neccessary class-----------//
 	
   
@@ -139,9 +160,12 @@ function carousel({auto,duration,interval,enterClass,leaveClass}) {
 }
 
 carousel({
-  'auto':false,
+  'container':".carousel-container",
+  'slides':'.slide',
+  'auto': getParam(),
   'interval':4000,
   'duration':1000,
   'enterClass':'animate__zoomInDown',
   'leaveClass':'animate__zoomOutDown',
 });
+
