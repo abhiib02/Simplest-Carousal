@@ -139,7 +139,7 @@ function carousel({auto,duration,interval,enterClass,leaveClass}) {
 }
 
 carousel({
-  'auto':getParam(),
+  'auto':false,
   'interval':4000,
   'duration':1000,
   'enterClass':'animate__zoomInDown',
