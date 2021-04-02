@@ -159,7 +159,7 @@ const carouselImages = document.querySelectorAll(slides);
 	//----------------- Autoplay event -----------------------//
 }
 
-carousel({
+/* carousel({
   'container':".carousel-container",
   'slides':'.slide',
   'auto': false,
@@ -167,5 +167,5 @@ carousel({
   'duration':1000,
   'enterClass':'animate__zoomInDown',
   'leaveClass':'animate__zoomOutDown',
-});
+});*/
 
