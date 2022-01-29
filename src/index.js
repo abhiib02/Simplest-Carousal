@@ -17,8 +17,6 @@ function carousel({
   leaveClass}) 
 
 {
-  
-  
 	//-------------- Configurations ---------------//
 const carouselContainer = document.querySelector(container);
 const carouselImages = document.querySelectorAll(slides);
