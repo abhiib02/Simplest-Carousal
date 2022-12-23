@@ -55,6 +55,17 @@
 </div>
 
     <script defer src="src/index.js"></script>
-
+    <script>
+       carousel({
+        'container':".carousel-container",
+        'slides':'.slide',
+        'auto': getParam(),
+        'interval':4000,
+        'duration':1000,
+        'enterClass':'animate__zoomInDown',
+        'leaveClass':'animate__zoomOutDown',
+        });
+        
+    </script>
   </body>
 </html>

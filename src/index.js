@@ -14,8 +14,12 @@ function getParam(){
 	duration,
 	interval,
 	enterClass,
-	leaveClass}) 
+	leaveClass,
+}) 
   
+
+
+
   {
 	
 	
@@ -156,17 +160,8 @@ function getParam(){
 			  }, animation_duration * 2);
 		  }, Imagestay_duration + animation_duration);
 	  }
+	}
 	  //----------------- Autoplay event -----------------------//
-  }
   
-  carousel({
-	'container':".carousel-container",
-	'slides':'.slide',
-	'auto': getParam(),
-	'interval':4000,
-	'duration':1000,
-	'enterClass':'animate__zoomInDown',
-	'leaveClass':'animate__zoomOutDown',
-  });
-  
+ 
   
